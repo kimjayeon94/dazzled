@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAZZLED</title>
+
+    <!-- js -->
+    <script src="lib/jquery-3.7.0.min.js"></script>
+
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/cdn.jsdelivr.net_npm_swiper@10_swiper-bundle.min.css" />
+
+    <!-- mainweek css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/index_style.css">
+
+    <!-- favicon -->
+    <link href="img/icon/favicon.png" rel="icon" type="image/png" sizes="32X32" alt="icon">
+
+    <!-- font -->
+    <link rel="stylesheet" href="css/font/s-core-dream.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Noto+Sans+KR:wght@100;200;300;400;500&family=Noto+Serif+KR&display=swap"
+        rel="stylesheet">
+
+    <meta property="og:title" content="DAZZLED">
+    <meta property="og:url" content="https://kimjayeon94.github.io/DAZZLED/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://kimjayeon94.github.io/DAZZLED/images/main/main.jpg">
+    <meta property="og:description" content="dazed&dazzled" />
+</head>
+
+<body>
+
+    <a href="#" class="top">
+        <img src="img/icon/top.png" alt="img">
+    </a>
+    <!-- top버튼 -->
+
+    <script>
+        //scroll top
+        $(window).scroll(function () {
+            var height = $(window).scrollTop();
+
+            // $('.top').hide();
+
+            console.log(height)
+
+            if (height > 100) {
+                $('.top').fadeIn();
+            } else {
+                $('.top').fadeOut();
+            }
+        });//scroll top end
+    </script>
+
+    <header>
+        <div id="header">
+            <div class="height_box"></div> <!-- 높이 잡는 가상의 박스 -->
+
+            <h1 class="logo">
+                <img src="img/icon/dazzled_logo.svg" alt="logo">
+            </h1><!-- logo -->
+        </div>
+
+        <div id="gnb_box">
+            <nav>
+                <ul class="gnb">
+                    <li>
+                        <a class="gtext gtext1" href="#none">FASHION</a>
+                    </li>
+                    <li>
+                        <a class="gtext gtext2" href="#none">BEAUTY</a>
+                    </li>
+                    <li>
+                        <a class="gtext gtext3" href="#none">LIFTSTYLE</a>
+                    </li>
+                    <li>
+                        <a class="gtext gtext4" href="#none">CULTURE</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 헤더효과 -->
+    <script>
+        const menu = document.querySelector('.height_box');
+        const menuHeight = menu.getBoundingClientRect().height;
+        const logo = document.querySelector('.logo');
+        const gnbBox = document.querySelector('#gnb_box');
+        const text1 = document.querySelector('.gtext1');
+        const text2 = document.querySelector('.gtext2');
+        const text3 = document.querySelector('.gtext3');
+        const text4 = document.querySelector('.gtext4');
+
+        document.addEventListener('scroll', () => {
+            if (window.scrollY > menuHeight) {
+                logo.classList.add('active');
+                gnbBox.classList.add('active');
+                text1.classList.add('active');
+                text2.classList.add('active');
+                text3.classList.add('active');
+                text4.classList.add('active');
+            } else {
+                logo.classList.remove('active');
+                gnbBox.classList.remove('active');
+                text1.classList.remove('active');
+                text2.classList.remove('active');
+                text3.classList.remove('active');
+                text4.classList.remove('active');
+            }
+        });
+    </script>
+
+    <main>
+        <img src="img/main/main.jpg" alt="img">
+        <div>
+            <h3>패션화보 │ <span>2023.11.03</span></h3>
+            <h1><a href="#none" class="click click_event">ALWAYS BLACK</a></h1>
+        </div>
+    </main>
+
+    <section class="cont1">
+        <div class="sec1_left">
+            <img src="img/main/cont_1.jpg" alt="img">
+            <div class="cont1_text cont1_left">
+                <h5>패션뉴스 ㅣ <span>2023.11.03</span></h5>
+                <h3><a href="#none" class="click click_event">가장 순도 높은 솔직함, PRADA</a></h3>
+            </div><!-- cont1_text -->
+        </div><!-- sec1_left -->
+
+        <div class="sec1_right">
+            <div>
+                <img src="img/main/cont_2.jpg" alt="img">
+                <div class="cont1_text">
+                    <h5>SHOW</h5>
+                    <h3><a href="#none" class="click click_event">이번 주말 놓치지 말아야 할 패션쇼</a></h3>
+                    <p>2023.11.03 ㅣ by 김자연</p>
+                </div><!-- cont1_text -->
+            </div>
+            <div>
+                <img src="img/main/cont_3.jpg" alt="img">
+                <div class="cont1_text">
+                    <h5>패션 트렌드</h5>
+                    <h3><a href="#none" class="click click_event">하늘 아래 같은 청은 없으니까.</a></h3>
+                    <p>2023.11.02 ㅣ by 김자연</p>
+                </div><!-- cont1_text -->
+            </div>
+            <div>
+                <img src="img/main/cont_4.jpg" alt="img">
+                <div class="cont1_text">
+                    <h5>패션 아이템</h5>
+                    <h3><a href="#none" class="click click_event">가을은 뭐다? 자켓이다.</a></h3>
+                    <p>2023.11.03 ㅣ by 김자연</p>
+                </div><!-- cont1_text -->
+            </div>
+            <div>
+                <img src="img/main/cont_5.jpg" alt="img">
+                <div class="cont1_text">
+                    <h5>패션 아이템</h5>
+                    <h3><a href="#none" class="click click_event">힙쟁이들을 사로잡을 뉴 '잇 선글라스'의 등장</a></h3>
+                    <p>2023.11.03 ㅣ by 김자연</p>
+                </div><!-- cont1_text -->
+            </div>
+        </div><!-- sec1_right -->
+    </section><!-- cont1 -->
+
+
+    <section class="cont2">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/main/cont_6.jpg" alt="img">
+                    <div class="cont1_text">
+                        <h5>패션 아이템</h5>
+                        <h3>
+                            <a href="#none" class="click click_event">
+                                지금 이 가방이 특별한 이유
+                            </a>
+                        </h3>
+                        <p>2023.11.03 ㅣ by 김자연</p>
+                    </div><!-- cont1_text -->
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/main/cont_7.jpg" alt="img">
+                    <div class="cont1_text">
+                        <h5>패션 아이템</h5>
+                        <h3>
+                            <a href="#none" class="click click_event">
+                                지금 가장 트렌디한 자켓
+                            </a>
+                        </h3>
+                        <p>2023.11.03 ㅣ by 김자연</p>
+                    </div><!-- cont1_text -->
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/main/cont_8.jpg" alt="img">
+                    <div class="cont1_text">
+                        <h5>패션 아이템</h5>
+                        <h3>
+                            <a href="#none" class="click click_event">
+                                후드티도 패션이다!
+                            </a>
+                        </h3>
+                        <p>2023.11.03 ㅣ by 김자연</p>
+                    </div><!-- cont1_text -->
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/main/cont_9.jpg" alt="img">
+                    <div class="cont1_text">
+                        <h5>패션 아이템</h5>
+                        <h3>
+                            <a href="#none" class="click click_event">
+                                올 겨울 패션 아이템 자켓? 패딩?
+                            </a>
+                        </h3>
+                        <p>2023.11.03 ㅣ by 김자연</p>
+                    </div><!-- cont1_text -->
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/main/cont_10.jpg" alt="img">
+                    <div class="cont1_text">
+                        <h5>패션 아이템</h5>
+                        <h3>
+                            <a href="#none" class="click click_event">
+                                This is CLASSIC!
+                            </a>
+                        </h3>
+                        <p>2023.11.03 ㅣ by 김자연</p>
+                    </div><!-- cont1_text -->
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/main/cont_11.jpg" alt="img">
+                    <div class="cont1_text">
+                        <h5>패션 아이템</h5>
+                        <h3>
+                            <a href="#none" class="click click_event">
+                                가을에는 코듀로이
+                            </a>
+                        </h3>
+                        <p>2023.11.03 ㅣ by 김자연</p>
+                    </div><!-- cont1_text -->
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/main/cont_12.jpg" alt="img">
+                    <div class="cont1_text">
+                        <h5>패션 아이템</h5>
+                        <h3>
+                            <a href="#none" class="click click_event">
+                                여전한 인기, 오버핏 자켓
+                            </a>
+                        </h3>
+                        <p>2023.11.03 ㅣ by 김자연</p>
+                    </div><!-- cont1_text -->
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/main/cont_13.jpg" alt="img">
+                    <div class="cont1_text">
+                        <h5>패션 아이템</h5>
+                        <h3>
+                            <a href="#none" class="click click_event">
+                                코트의 정석 MAX MARA
+                            </a>
+                        </h3>
+                        <p>2023.11.03 ㅣ by 김자연</p>
+                    </div><!-- cont1_text -->
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- swiper -->
+    </section>
+
+    <!-- mainweek swiper js -->
+    <script src="./js/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+            },
+        });
+    </script>
+
+    <section class="cont3">
+
+        <div class="cont3_left">
+
+            <div class="cont3_box">
+                <img src="img/main/cont_20.jpg" alt="img">
+                <div class="cont1_text cont3_text">
+                    <h5>패션 트렌드</h5>
+                    <h3><a href="#none" class="text_border">올 겨울도 숏패딩으로</a></h3>
+                    <p>2023.11.03 ㅣ by 김자연</p>
+                </div><!-- cont1_text -->
+            </div>
+
+
+            <p class="more">더보기</p>
+
+
+
+            <div class="cont3_box hide">
+                <img src="img/main/cont_21.jpg" alt="img">
+                <div class="cont1_text cont3_text">
+                    <h5>패션 트렌드</h5>
+                    <h3><a href="#none" class="text_border">절대 실패 없을, 청바지에 코트 입는 법</a></h3>
+                    <p>2023.11.02 ㅣ by 김자연</p>
+                </div><!-- cont1_text -->
+            </div>
+            <div class="cont3_box hide">
+                <img src="img/main/cont_22.jpg" alt="img">
+                <div class="cont1_text cont3_text">
+                    <h5>뷰티 아이템</h5>
+                    <h3><a href="#none" class="text_border">향이 당신을 치유한다면</a></h3>
+                    <p>2023.11.03 ㅣ by 김자연</p>
+                </div><!-- cont1_text -->
+            </div>
+            <div class="cont3_box hide">
+                <img src="img/main/cont_23.jpg" alt="img">
+                <div class="cont1_text cont3_text">
+                    <h5>패션 아이템</h5>
+                    <h3><a href="#none" class="text_border">룩의 완성 '선글라스'</a></h3>
+                    <p>2023.11.03 ㅣ by 김자연</p>
+                </div><!-- cont1_text -->
+            </div>
+            <div class="cont3_box hide">
+                <img src="img/main/cont_24.jpg" alt="img">
+                <div class="cont1_text cont3_text">
+                    <h5>뷰티 아이템</h5>
+                    <h3><a href="#none" class="text_border">찰랑이는 머릿결, 케라스타즈</a></h3>
+                    <p>2023.11.03 ㅣ by 김자연</p>
+                </div><!-- cont1_text -->
+            </div>
+            <div class="cont3_box hide">
+                <img src="img/main/cont_25.jpg" alt="img">
+                <div class="cont1_text cont3_text">
+                    <h5>패션 아이템</h5>
+                    <h3><a href="#none" class="text_border">가을은 뭐다? 자켓이다.</a></h3>
+                    <p>2023.11.03 ㅣ by 김자연</p>
+                </div><!-- cont1_text -->
+            </div>
+            <div class="cont3_box hide">
+                <img src="img/main/cont_26.jpg" alt="img">
+                <div class="cont1_text cont3_text">
+                    <h5>패션 아이템</h5>
+                    <h3><a href="#none" class="text_border">헤일리 비버가 사랑하는 보테가 조디백</a></h3>
+                    <p>2023.11.03 ㅣ by 김자연</p>
+                </div><!-- cont1_text -->
+            </div>
+            <div class="cont3_box hide">
+                <img src="img/main/cont_27.jpg" alt="img">
+                <div class="cont1_text cont3_text">
+                    <h5>패션 아이템</h5>
+                    <h3><a href="#none" class="text_border">forever black 무심한 듯 쿨하게</a></h3>
+                    <p>2023.11.03 ㅣ by 김자연</p>
+                </div><!-- cont1_text -->
+            </div>
+
+
+
+
+        </div><!-- cont3_left -->
+
+        <div class="cont3_right">
+            <img src="img/main/cont_sticky.jpg" alt="img">
+            <div class="cont1_text cont1_right">
+                <h5>패션뉴스 ㅣ <span>2023.11.03</span></h5>
+                <h3><a href="#none" class="click click_event">가장 순도 높은 솔직함, PRADA</a></h3>
+            </div><!-- cont1_text -->
+        </div><!-- sec1_left -->
+    </section><!-- cont1 -->
+
+    <footer>
+        <h1 class="f_logo">
+            <img src="img/icon/dazzled_white_logo.svg" alt="f_logo">
+        </h1>
+        <p>정기구독 ㅣ 회사소개 ㅣ 광고/제휴</p>
+        <p><span>DAZZLED.CO.KR IS OPERATED BY JAYEON MAGAZINE</span></p>
+    </footer>
+
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        $(function () {
+            $('.more').click(function () {
+                $(this).siblings().slideToggle();
+                $(this).html('닫기');
+            })
+        })
+    </script>
+
+</body>
+
+</html>

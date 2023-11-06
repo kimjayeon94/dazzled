@@ -1,0 +1,572 @@
+@charset "utf-8";
+
+@font-face {
+    /* 다운받은 폰트 웹폰트로 적용시키기! */
+    font-family: 'Rosie Brown Serif';
+    src: url('../css/font/Rosie\ Brown\ Serif\ Demo.otf') format(truetype);
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+textarea,
+button,
+select,
+figure,
+span {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Rosie Brown Serif', 's-core-dream-medium';
+}
+
+html {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+body {
+    /* font-family: 's-core-dream-regular'; */
+    font-family: 's-core-dream-medium','GmarketSansMedium','Noto Sans KR','Noto Sans', sans-serif;
+    /* font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Noto Serif KR', serif; */
+    word-break: keep-all;
+}
+
+h3 {
+    font-weight: 200;
+}
+
+/* scroll top */
+.top {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 99;
+
+
+    display: none;
+    /* background-color: #081120; */
+
+    width: 40px;
+
+    text-align: center;
+    padding: 5px 5px 0;
+}
+
+.top img {
+    width: 50px;
+    display: block;
+}
+
+
+/* header */
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 11111;
+
+    width: 100%;
+
+    text-align: center;
+    background-color: #fff;
+}
+
+.height_box {
+    height: 0px;
+}
+
+#header .logo {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 30px 0;
+    transition: .3s ease-out;
+}
+
+
+@media (min-width:768px) {
+    #header .logo.active {
+        width: 20%;
+        padding: 30px 0;
+        transition: .3s ease-out;
+    }
+}
+
+@media (max-width:767px) {
+    #header .logo {
+        width: 80%;
+        padding: 30px 0;
+        transition: .3s ease-out;
+    }
+
+    #header .logo.active {
+        width: 50%;
+        transition: .3s ease-out;
+    }
+}
+
+#gnb_box.active {
+    background-color: #000;
+    color: #fff;
+}
+
+nav {
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.gnb {
+    display: flex;
+    justify-content: space-around;
+}
+
+.gtext {
+    font-size: 15px;
+    font-weight: bolder;
+    padding: 15px 0;
+    display: block;
+    transition: 0.3s;
+}
+
+.gtext:hover {
+    color: #f08080;
+    transform: translateY(-3px);
+    transition: 0.3s;
+}
+
+.gtext1.active,
+.gtext2.active,
+.gtext3.active,
+.gtext4.active {
+    font-size: 20px;
+}
+
+@media (max-width:767px) {
+    .gtext {
+        font-size: 10px;
+    }
+
+    .gtext1.active,
+    .gtext2.active,
+    .gtext3.active,
+    .gtext4.active {
+        font-size: 15px;
+    }
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto 100px;
+
+    position: relative;
+}
+
+main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main div {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translateY(-50%);
+}
+
+main div h3 span {
+    color: #777;
+    font-size: 11px;
+}
+
+main div h1 {
+    margin-top: 10%;
+    font-size: 4vw;
+}
+
+
+/* 호버시 밑줄 이벤트!! */
+.click {
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+}
+
+.click::before,
+.click::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+}
+
+.click::before {
+    content: '';
+    /* show by default */
+}
+
+.click_event::before {
+    content: '';
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+}
+
+.click_event:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+}
+
+/* 호버시 밑줄 이벤트!! 끝 */
+
+
+
+@media (max-width:767px) {
+    nav {
+        width: 90%;
+    }
+
+    main {
+        width: 100%;
+        height: auto;
+    }
+
+    main img {
+        width: 100%;
+        height: 100%;
+    }
+
+    main div h3 {
+        font-size: 10px;
+    }
+
+    main div h3 span {
+        font-size: 8px;
+    }
+
+    main div h1 {
+        margin-top: 5%;
+        font-size: 5vw;
+    }
+}
+
+.cont1 {
+    width: 70%;
+    height: 40vw;
+
+    margin: 100px auto;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sec1_left {
+    width: 40%;
+    height: 40vw;
+
+    position: relative;
+}
+
+.sec1_left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont1_left {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    color: #fff;
+}
+
+.cont1_left h3 {
+    margin-top: 5%;
+    font-size: 1.3vw;
+    font-weight: 100;
+}
+
+.sec1_right {
+    width: 58%;
+    height: 40vw;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sec1_right>div {
+    width: calc(100% / 2 - 5px);
+    height: 50%;
+}
+
+.sec1_right div img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.cont1_text {
+    margin-top: 2%;
+}
+
+.cont1_text p {
+    font-size: 11px;
+}
+
+@media (max-width:767px) {
+    .cont1 {
+        width: 90%;
+        height: auto;
+    }
+
+    .sec1_left {
+        width: 100%;
+        height: 90vw;
+        margin-bottom: 30px;
+    }
+
+    .cont1_left h3 {
+        font-size: 20px;
+    }
+
+    .sec1_right {
+        width: 100%;
+        height: auto;
+        /* 이거 안 잡아줘서 개고생함 */
+    }
+
+    .sec1_right>div {
+        width: 100%;
+        height: auto;
+    }
+
+    .sec1_right div img {
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+    }
+
+    .cont1_text {
+        margin-top: 2%;
+    }
+
+    .cont1_text p {
+        font-size: 11px;
+    }
+}
+
+.cont2 {
+    background-color: #eee;
+    padding: 30px 0;
+}
+
+/* swiper */
+.swiper {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.swiper-slide {
+    /* text-align: center; */
+    font-size: 18px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+@media (max-width:767px) {
+    .swiper {
+        width: 90%;
+    }
+}
+
+.cont3 {
+    width: 70%;
+    height: auto;
+
+    margin: 100px auto;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.more {
+    display: none;
+}
+
+.cont3_left {
+    width: 68%;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cont3_box {
+    width: calc(100%/2 - 5px);
+    height: 40vw;
+}
+
+.cont3_box img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.cont3_right {
+    width: 30%;
+    height: 80vh;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.cont3_right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont1_right {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    color: #fff;
+}
+
+.cont1_right h3 {
+    margin-top: 5%;
+    font-size: 1.3vw;
+    font-weight: 100;
+}
+
+.text_border:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width:767px) {
+    .cont3 {
+        width: 90%;
+        height: auto;
+    }
+
+    .more {
+        display: block;
+
+        background-color: #000;
+        color: #fff;
+        cursor: pointer;
+        width: 80px;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .hide,
+    .cont3_right {
+        display: none;
+    }
+
+    .cont3_left {
+        width: 100%;
+        height: auto;
+        /* 이거 안 잡아줘서 개고생함 */
+    }
+
+    .cont3_box {
+        width: 100%;
+        height: 40vw;
+        margin-bottom: 2%;
+    }
+
+    .cont3_box img {
+        width: 40%;
+        height: 100%;
+        object-fit: cover;
+
+        float: left;
+    }
+
+    .cont3_text {
+        width: 58%;
+        float: right;
+    }
+
+    .cont1_text p {
+        font-size: 11px;
+    }
+}
+
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 3% 0 7%;
+}
+
+.f_logo img {
+    width: 15%;
+}
+
+footer p {
+    margin-top: 2%;
+    color: #fff;
+}
+
+footer p span {
+    color: #777;
+}
